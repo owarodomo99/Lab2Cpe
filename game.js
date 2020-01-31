@@ -17,6 +17,8 @@ function addCheck(nStr)
             document.getElementById('ccc').innerHTML =  "!!!!🚩🚩🚩  You Win  🚩🚩🚩!!!!!";
             document.getElementById('ddd').innerHTML =  "🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩🚩";
             bodyOnload(10000);
+            begintimer().document.getElementById('dplay').innerHTML = "XXXX";
+            setTimeout("begintimer()",1000)
     
           }
           document.frmMain.txtNumberA.value = " ";
@@ -25,6 +27,9 @@ function addCheck(nStr)
             document.getElementById('ccc').innerHTML =  "!!!!!!!!!!!!!  You Lose  !!!!!!!!!!!";
             document.getElementById('ddd').innerHTML =  "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
             bodyOnload(10000);
+            begintimer().document.getElementById('dplay').innerHTML = "XXXX";
+            setTimeout("begintimer()",1000)
+    
         }
         document.querySelector("q").innerHTML = N;
 
