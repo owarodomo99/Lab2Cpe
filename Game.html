@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
      <!-- Bootstrap 3.3.7 -->
-     <link rel="stylesheet" href="game.css">
      
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Font Awesome -->
@@ -309,34 +308,43 @@ folder instead of downloading all of them to reduce the load. -->
     
         
         <!-- ./col -->
-        <p><br><br><br></p>
-        <p align="center"><img src="3.jpg"  height="390"></p>
-        <p><br></p>
-    
-          
-        <p align="center"><img src="5.jpg"  height="390"></p>
-        <p><br></p>
-    
-        <p align="center"><img src="1.jpg"  height="390"></p>
-        <p><br></p>
-    
-        <p align="center"> <img src="2.jpg"  height="390"></p>
-        <p><br></p>
-    
-        <p align="center"><img src="4.jpg" height="390"></p>
-        <p><br></p>
-    
-        <p align="center"><img src="6.jpg"  height="390"></p>
-        <p><br></p>
-    
-        <p align="center"><img src="7.jpg" height="533"></p>
-        <p><br></p>
-    
-        <p align="center"> <img src="8.jpg" height="533" ></p>
-        <p><br></p>
-    
-        <p align="center"> <img src="9.jpg" height="533"></p>
-        <p><br></p>
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body onLoad="begintimer()">
+    <form name="frmMain" action="" method="post" class="form-signin ">
+    <script language="">
+
+//-->
+</script> 
+        <div class="container">
+            <h1 id = "ccc">🎲Number Guessing game🎲</h1>
+            <pp id="ddd">🎲We have selected a random number between 1 and 100.See if you can guess it in 10 terns or less.🎲<br>🎲🎲🎲We'll tell you if your guess was too high or too low.🎲🎲🎲<br><br></pp>
+          </div>
+
+          <input type="text" name="txtNumberA" value="" placeholder="Enter a guess" >
+          <pp>Count : <q>10</q>  : <r id=dplay ></r></pp>
+           <pp><input type="button" name="btnSum" value="Submit guess" OnClick="fncA();"></pp>
+            <pp><input1 type="button" name="btnReset" value="Play again" OnClick= "Refresh();"></pp>
+                <h2>Previous guesses </h2><br>
+
+            <a id="aaa"> </a>  
+              <b id="bbb"> </b>
+
+
+        </form>
+        <script src="game.js" ></script>
+        
+</body>
+</html>
+
         
           </section>
           <!-- /.content -->
