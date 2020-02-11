@@ -7,6 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="game.css">
+     <!-- Required meta tags -->
+  
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Font Awesome -->
@@ -306,20 +312,65 @@ folder instead of downloading all of them to reduce the load. -->
                 <!-- /.widget-user -->
               </div>
           </div>
-          <div class="row"></div>
-          <div class="col-md-12" align= "center">
-    
-              <input align= "center" type="text" name="firstname" placeholder="Enter First Name">
-          <p><br></p>
-             <input align= "center" type="text" name="lastname" placeholder="Enter Last Name">
-             <p><br></p>
-             <input align= "center" type="text" name="email" placeholder="Enter Email">
-             <p><br></p>
-             <input align= "center" type="text" name="massage" placeholder="Enter Massage">
-             <p><br</p>
-          
-             <a align= "center" href="index.html"><input type="submit" value="SUBMIT" class="btn"></aalign= "center">
-            </p>
+          <body style="padding: 1em">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card border-info mb-3">
+                            <div class="card-header">
+                                <h3 class="card-title">CONTACT</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="">Enter Firstname</label>
+                                        <input type="text" id="firstname" class="form-control" placeholder="Firstname...">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="">Enter Lastname</label>
+                                      <input type="text" id="lastname" class="form-control" placeholder="Lastname...">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="">Enter Email</label>
+                                    <input type="text" id="email" class="form-control" placeholder="Email...">
+                                </div>
+                                <div class="form-group">
+                                  <label for="">EnteSubjr Massage</label>
+                                  <input type="text" id="massage" class="form-control" placeholder="Massage...">
+                              </div>
+                                    
+                                </form>
+                                <button class="btn btn-primary btn-flat">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card text-white bg-dark mb-3">
+                            <div class="card-header">
+                                <h3 class="card-title">Result</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table text-white">
+                                    <thead>
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email</th>
+                                            <th>Massage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                    </tbody>
+                                </table>
+                                <table class="table footer"></table>
+                                <h4></h4>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
         <!-- ./col -->
       
          </div>
@@ -534,11 +585,28 @@ folder instead of downloading all of them to reduce the load. -->
       $('.sidebar-menu').tree()
     })
   </script>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+   <script src="/contact.js"></script>
 
 </body>
 </html>
-
-
 
 
 
