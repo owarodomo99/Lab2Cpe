@@ -56,12 +56,43 @@ let db = firebase.firestore();
 
 $('button').click(() => {
 
-    if($('#firstname').val()==='' || $('#lastname').val()==='' || $('#email').val()===''||  $('#massage').val() === ''){
-        alert('please input all the boxes.');
+    
+    if ($('#firstname').val()==='') {
+        alert('Please input your FirstName !');
+        document.myForm.firstname.focus();
+    
+    }
+
+    else if ($('#lastname').val()==='') {
+        alert('Please input your LastName !');
+        document.myForm.lastname.focus();
+     
+    }
+    else if($('#gender').val()===''){
+        alert('please choose yours gender.');
+        document.myForm.gender.focus();
+    }
+    else if ( $('#email').val()==='') {
+        alert('Please input your Email !');
+        document.myForm.email.focus();
+      
+    }
+    else if ( validateEmail($('#email').val())===false) {
+        alert('Email is not correct!');
+        document.myForm.email.focus();
+      
+    }
+
+    else if ( $('#massage').val() === '') {
+        alert('Please input your Massage !');
+        document.myForm.massage.focus();
+       
+
     }else{
     db.collection("USers").add({
         firstname: $('#firstname').val(),
         lastname: $('#lastname').val(),
+        gender: Number($('#gender').val()),
         email: $('#email').val(),
         massage: $('#massage').val(),
           
@@ -71,6 +102,7 @@ $('button').click(() => {
             console.log("Document written with ID: ", docRef.id);
             $('#firstname').val(' ')
             $('#lastname').val(' ')
+            $('#gender').val(' ')
             $('#email').val(' ')
             $('#massage').val(' ')
         })
@@ -82,9 +114,13 @@ $('button').click(() => {
 
 
 
+
 db.collection("USers").onSnapshot(doc=>{
     let table = $('tbody')[0]
-   
+   Male=0;
+   Female=0;
+   Other=0;
+   SumG=0;
    
     $("tbody tr").remove();
     
@@ -94,12 +130,53 @@ db.collection("USers").onSnapshot(doc=>{
         let secondcell =row.insertCell(1)
         let thirdcell =row.insertCell(2)
         let fourthcell = row.insertCell(3)
+        let fifthcell = row.insertCell(4)
         firstcell.textContent=item.data().firstname
         secondcell.textContent=item.data().lastname
-        thirdcell.textContent=item.data().email
-        fourthcell.textContent=item.data().massage
-       
+        thirdcell.textContent=GString(item.data().gender)
+        fourthcell.textContent=item.data().email
+        fifthcell.textContent=item.data().massage
+        if(item.data().gender==1){
+            Male+=1;
+            SumG+=1;
+        }else if(item.data().gender==2){
+            Female+=1;
+            SumG+=1;
+        }
+        else if(item.data().gender==3){
+            Other+=1;
+            SumG+=1;
+        }else{
+            SumG=1;
+        }
+     
     })
-  
+   console.log()
+    $('h4').text("Male: "+(Male*100/SumG)+"%    "+"Female: "+Female*100/SumG+"%     "+"Other: "+Other*100/SumG+"%    ")
 })
 
+
+let validateEmail = (email) => {
+    atpos = email.indexOf('@');
+    dotpos = email.lastIndexOf('.');
+
+    if (atpos < 1 || (dotpos-atpos) < 2) {
+        document.myForm.email.focus();
+        return false;
+    }
+    return true;
+}
+
+function GString(score){
+    
+    if(score==1){
+    score = 'Male';
+    }
+    else if(score==2){
+    score = 'Female';
+    }
+    else if(score==3){
+    score = 'Other';
+    }
+    return score;
+}

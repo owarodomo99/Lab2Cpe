@@ -14,3 +14,19 @@
         border-left-style: double;
         text-align: center;
       }
+      h6{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 22px;
+      }
+      h5{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 22px;
+      }
+      h4{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 22px;
+      }
+option{
+  text-align: center;
+}      
+      
